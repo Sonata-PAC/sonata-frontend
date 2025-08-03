@@ -1,0 +1,22 @@
+{
+  	"bracketSpacing": true,
+  	"semi": false,
+  	"singleQuote": false,
+  	"tabWidth": 2,
+	"trailingComma": "es5",
+	"printWidth": 120,
+	"svelteSortOrder": "scripts-markup-styles",
+	"svelteStrictMode": false,
+  	"svelteBracketNewLine": true,
+  	"svelteAllowShorthand": true,
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	],
+	"tailwindStylesheet": "./src/app.css"
+}

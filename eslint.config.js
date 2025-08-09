@@ -24,7 +24,8 @@ export default ts.config(
     rules: {
       // Style
       "no-undef": "off",
-      indent: ["error", 2, { "SwitchCase": 1 }],
+      indent: ["error", 2, { SwitchCase: 1 }],
+      "@/indent": ["error", 2],
       quotes: ["warn", "double"],
       semi: ["warn", "never"],
 
@@ -33,7 +34,7 @@ export default ts.config(
       "no-console": "warn",
       "no-debugger": "error",
       "no-var": "error",
-      "prefer-const": "warn",
+      // "prefer-const": "warn",
       "func-style": ["error", "expression"],
       "prefer-arrow-callback": "warn",
 
@@ -42,12 +43,11 @@ export default ts.config(
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
-          "varsIgnorePattern": "^_$",
-          "argsIgnorePattern": "^_$",
-          "ignoreRestSiblings": true
-        }
-      ]
-
+          varsIgnorePattern: "^_$",
+          argsIgnorePattern: "^_$",
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
   {

@@ -1,7 +1,4 @@
 <script lang="ts">
-
 </script>
 
-<div>
-    host
-</div>
+<div>host</div>

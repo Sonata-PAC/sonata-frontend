@@ -2,9 +2,9 @@ name: Frontend CI
 
 on:
   pull_request:
-    branches: [ main, development ]
+    branches: [main, development]
   push:
-    branches: [ main, development ]
+    branches: [main, development]
 
 jobs:
   build-test:
@@ -15,11 +15,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - run: npm run lint
       - run: npm test --if-present
       - run: npm run test:e2e --if-present
+      - run: npm run npx prettier --write .
       - run: npm run build
       - name: Upload artifact
         uses: actions/upload-artifact@v4

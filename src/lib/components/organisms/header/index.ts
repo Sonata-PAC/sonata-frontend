@@ -1,5 +1,3 @@
-import Root from './header.svelte'
+import Root from "./header.svelte"
 
-export {
-    Root, Root as Header
-}
+export { Root, Root as Header }
